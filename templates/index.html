@@ -7,7 +7,7 @@
         {% set banner = resize_image(path="/static/banner.jpg", width=672, op="fit_width") %}
         <img src="{{ banner.url }}" class="index-banner" alt="A misty forest."/>
         <p>
-            {{ config.description }}
+            {{ config.description | markdown | safe }}
         </p>
     </section>
     <section class="index-columns">
